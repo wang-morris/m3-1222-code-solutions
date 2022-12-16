@@ -9,11 +9,6 @@ class CustomButton extends React.Component {
 
   handleClick(props) {
     this.setState({ isClicked: true });
-    return (
-      <div>
-        <button> a different button</button>
-      </div>
-    );
   }
 
   render() {
@@ -28,7 +23,6 @@ class CustomButton extends React.Component {
         <button>also a button</button>
       );
     }
-
   }
 }
 
