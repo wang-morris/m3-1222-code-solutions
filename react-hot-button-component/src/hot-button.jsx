@@ -1,55 +1,41 @@
 import React from 'react';
-let clickCount = 0;
 
 class CustomButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isClicked: false };
+    this.state = {
+      clickCount: 0
+    };
   }
 
   handleClick(props) {
-    this.setState({ isClicked: true });
+    this.setState({
+      clickCount: this.state.clickCount + 1
+    });
   }
 
   render() {
-    clickCount++;
-    if (clickCount < 4) {
-      return (
-        <div>
-          <button onClick={this.handleClick.bind(this)} className="cold">Hot Button</button>
-        </div>
-      );
-    } else if (clickCount < 7) {
-      return (
-        <div>
-          <button onClick={this.handleClick.bind(this)} className="cool">Hot Button</button>
-        </div>
-      );
-    } else if (clickCount < 10) {
-      return (
-        <div>
-          <button onClick={this.handleClick.bind(this)} className="luke-warm">Hot Button</button>
-        </div>
-      );
-    } else if (clickCount < 13) {
-      return (
-        <div>
-          <button onClick={this.handleClick.bind(this)} className="warm">Hot Button</button>
-        </div>
-      );
-    } else if (clickCount < 16) {
-      return (
-        <div>
-          <button onClick={this.handleClick.bind(this)} className="hot">Hot Button</button>
-        </div>
-      );
+    const count = this.state.clickCount;
+    let btnClass;
+    if (count < 4) {
+      btnClass = 'cold';
+    } else if (count < 7) {
+      btnClass = 'cool';
+    } else if (count < 10) {
+      btnClass = 'luke-warm';
+    } else if (count < 13) {
+      btnClass = 'warm';
+    } else if (count < 16) {
+      btnClass = 'hot';
     } else {
-      return (
-        <div>
-          <button onClick={this.handleClick.bind(this)} className="super-hot">Hot Button</button>
-        </div>
-      );
+      btnClass = 'super-hot';
     }
+
+    return (
+      <div>
+        <button onClick={this.handleClick.bind(this)} className={btnClass}>Hot Button</button>
+      </div>
+    );
   }
 }
 
