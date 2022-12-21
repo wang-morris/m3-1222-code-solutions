@@ -1,39 +1,43 @@
 import React from 'react';
-let clickCount = 0;
 
 class ToggleSwitch extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isClicked: false };
+    this.state = {
+      clickCount: 0
+    };
   }
 
   handleClick() {
-    this.setState({ isClicked: true });
+    this.setState({
+      clickCount: this.state.clickCount + 1
+    });
   }
 
   render() {
-    clickCount++;
-    if (clickCount % 2 === 0) {
-      return (
-        <div>
-          <div className="button-container">
-            <button onClick={this.handleClick.bind(this)} className="on"></button>
-            <div onClick={this.handleClick.bind(this)} className="on-circle"></div>
-          </div>
-          <p>ON</p>
-        </div>
-      );
-    } else if (clickCount % 2 === 1) {
-      return (
-        <div>
-          <div className="button-container">
-            <button onClick={this.handleClick.bind(this)} className="off"></button>
-            <div onClick={this.handleClick.bind(this)} className="off-circle"></div>
-          </div>
-          <p>OFF</p>
-        </div>
-      );
+    const count = this.state.clickCount;
+    let btn;
+    let circleType;
+    let wordType;
+    if (count % 2 === 0) {
+      btn = 'off';
+      circleType = 'off-circle';
+      wordType = 'OFF';
+    } else {
+      btn = 'on';
+      circleType = 'on-circle';
+      wordType = 'ON';
     }
+
+    return (
+      <div>
+        <div className="button-container">
+          <button onClick={this.handleClick.bind(this)} className={btn}></button>
+          <div onClick={this.handleClick.bind(this)} className={circleType}></div>
+        </div>
+        <p>{wordType}</p>
+      </div>
+    );
   }
 }
 
