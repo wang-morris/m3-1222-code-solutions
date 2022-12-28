@@ -1,0 +1,34 @@
+form {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: 0.2rem solid black;
+  font-size: 1.3rem;
+}
+
+.password-container {
+  display: flex;
+  padding-top: 0.6rem;
+}
+
+.x-symbol {
+  position: relative;
+  left: 0.5rem;
+  top: 0.5rem;
+  color: rgb(183 58 58);
+}
+
+.checkmark {
+  position: relative;
+  left: 0.5rem;
+  top: 0.5rem;
+  color: rgb(36 110 9);
+}
+
+p {
+  font-size: 0.8rem;
+  color: rgb(183 58 58);
+}
