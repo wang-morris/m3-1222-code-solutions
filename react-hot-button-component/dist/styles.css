@@ -1,0 +1,42 @@
+button {
+  position: relative;
+  color: white;
+  font-size: 1rem;
+  padding: 0.7em 1.1rem;
+  background-color: rgb(38 14 104);
+  border: 0.2rem solid black;
+  box-shadow: 0.3rem 0.3rem 0 black;
+}
+
+button:active {
+  top: 2px;
+  left: 1px;
+  box-shadow: none;
+}
+
+.cold {
+  background-color: rgb(38 14 104);
+}
+
+.cool {
+  background-color: rgb(98 67 182);
+}
+
+.luke-warm {
+  background-color: rgb(193 96 96);
+}
+
+.warm {
+  background-color: rgb(214 164 72);
+  color: black;
+}
+
+.hot {
+  background-color: rgb(250 239 15);
+  color: black;
+}
+
+.super-hot {
+  background-color: white;
+  color: black;
+}
