@@ -1,0 +1,49 @@
+body {
+  font-family: sans-serif;
+}
+
+div {
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  height: 1.5rem;
+  padding: 0.5rem 1.2rem;
+  border: 0.2rem solid black;
+  border-radius: 0.7rem;
+}
+
+.button-container {
+  display: flex;
+}
+
+.on-circle {
+  position: relative;
+  right: 1.4rem;
+  height: 1rem;
+  width: 1rem;
+  border: 0.2rem solid black;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.off-circle {
+  position: relative;
+  right: 2.8rem;
+  height: 1rem;
+  width: 1rem;
+  border: 0.2rem solid black;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.on {
+  background-color: rgb(60 122 60);
+}
+
+.off {
+  background-color: rgb(184 182 182);
+}
