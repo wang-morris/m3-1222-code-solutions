@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+}
+
+.watch-container {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  align-items: center;
+}
+
+.timer-container {
+  display: flex;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timer-face {
+  height: 10rem;
+  width: 10rem;
+  border: 0.3rem solid black;
+  border-radius: 50%;
+  position: relative;
+  left: 0.4rem;
+}
+
+.number {
+  font-size: 2.5rem;
+  position: relative;
+  right: 6rem;
+  top: 4rem;
+}
+
+.fa-solid {
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  bottom: 1rem;
+}
