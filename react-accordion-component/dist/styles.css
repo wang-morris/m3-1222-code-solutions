@@ -1,0 +1,37 @@
+* {
+  font-family: sans-serif;
+}
+
+.accordion-container {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+}
+
+.topics {
+  font-size: 1.3rem;
+  width: 20rem;
+  background-color: rgb(206 202 202);
+  padding: 0.7rem;
+  border: 2px solid black;
+  margin-bottom: 0.1rem;
+  cursor: pointer;
+}
+
+.desc {
+  font-size: 0.9rem;
+  width: 20rem;
+  background-color: rgb(247 244 244);
+  border: 2px solid black;
+  padding: 0.7rem;
+  margin-bottom: 0.1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: unset;
+}
