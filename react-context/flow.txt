@@ -1,0 +1,20 @@
+User can sign up
+-user submits form, which sends a post request to the server with the users typed information
+-this will update the database with a new user entry row
+-if the user is successfully created, the user is sent a sucessful response
+-window.location.hash is then set to the 'sign in' screen
+
+User can sign in
+-user submits form, which sends post request to the server
+-the user is found in the database by username and hashed password
+-the user is sent back a successful response along with a access token to track the user
+-handleSignIn is called which stores the token in local storage
+-on sign in, the home page is rendered
+
+User can stay signed in
+-the browser uses local storage to store the access token information
+
+User can sign out
+-when user clicks sign out, handleSignOut is called
+-this will remote the access token from local storage
+-the log in page is displayed again
